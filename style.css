@@ -4,11 +4,17 @@
     padding: 0;
 }
 
+html,
 body {
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
     position: relative;
-    background-image: url('background.jpg');
-    background-size: cover;
+    background-image: url('street_pulse.png');
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f0f0f0;
@@ -17,40 +23,53 @@ body {
 .mission {
     font-family: system-ui, sans-serif;
     font-size: 1.1rem;
-    color: #222;
+    font-weight: 700;
+    color: #1a1a1a;
     position: absolute;
-    top: 15rem;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 50%;
+    text-align: center;
+    background: white;
+    padding: 0.6rem 1.5rem;
+    border: 3px solid #ffd700;
+    border-radius: 6px;
+    box-shadow: 0 0 0 3px #ffd700;
 }
 
 .btn-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.75rem;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 1rem;
 }
 
 .btn {
     display: block;
-    width: 160px;
-    padding: 0.5rem 1rem;
+    width: 180px;
+    padding: 0.75rem 1rem;
     text-align: center;
     font-family: system-ui, sans-serif;
-    font-size: 1rem;
-    color: #222;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
     text-decoration: none;
-    border: 1.5px solid #555;
-    border-radius: 3px;
+    border: 3px solid #ffd700;
+    border-radius: 6px;
     background: white;
-    transition: background 0.15s;
+    box-shadow: 0 0 0 3px #ffd700;
+    transition: box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.03em;
 }
 
 .btn:hover {
-    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 0 5px #ffd700;
+    transform: translateY(-2px);
 }
