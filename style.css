@@ -13,7 +13,7 @@ body {
 
 body {
     position: relative;
-    background-image: url('street_pulse.png');
+    background-image: url('background.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,30 +22,45 @@ body {
 
 .mission {
     font-family: system-ui, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #fff;
     position: absolute;
-    top: 1rem;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     white-space: normal;
-    max-width: 50%;
+    width: 50%;
     text-align: center;
-    background: white;
-    padding: 0.6rem 1.5rem;
-    border: 3px solid #ffd700;
-    border-radius: 6px;
-    box-shadow: 0 0 0 3px #ffd700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    padding: 0.8rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.mission img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    object-fit: contain;
 }
 
 .btn-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 1rem;
@@ -53,23 +68,31 @@ body {
 
 .btn {
     display: block;
-    width: 180px;
-    padding: 0.75rem 1rem;
+    width: 240px;
+    padding: 1.1rem 1rem;
     text-align: center;
     font-family: system-ui, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #fff;
     text-decoration: none;
-    border: 3px solid #ffd700;
-    border-radius: 6px;
-    background: white;
-    box-shadow: 0 0 0 3px #ffd700;
-    transition: box-shadow 0.2s, transform 0.2s;
-    letter-spacing: 0.03em;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(60, 60, 60, 0.9));
+    border: 1px solid rgba(255, 215, 0, 0.7);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    letter-spacing: 0.04em;
+    box-shadow:
+        0 0 0 1px rgba(255, 215, 0, 0.2),
+        0 0 18px 5px rgba(255, 215, 0, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
 }
 
 .btn:hover {
-    box-shadow: 0 0 0 5px #ffd700;
+    border-color: rgba(255, 215, 0, 1);
+    box-shadow:
+        0 0 0 1px rgba(255, 215, 0, 0.5),
+        0 0 28px 10px rgba(255, 215, 0, 0.45),
+        0 12px 32px rgba(0, 0, 0, 0.6);
     transform: translateY(-2px);
 }
